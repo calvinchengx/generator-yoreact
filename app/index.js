@@ -23,10 +23,8 @@ YoreactGenerator.prototype.askFor = function askFor() {
   console.log(this.yeoman);
 
   var prompts = [{
-    type: 'confirm',
     name: 'projName',
     message: 'What do you want to call your project?',
-    default: true
   },
   {
 	name: 'authorName',
