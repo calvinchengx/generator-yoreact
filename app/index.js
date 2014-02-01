@@ -46,8 +46,9 @@ YoreactGenerator.prototype.app = function app() {
   this.mkdir('app');
   this.mkdir('app/templates');
 
-  this.copy('_package.json', 'package.json');
-  this.copy('_bower.json', 'bower.json');
+  this.template('Gruntfile.js', 'Gruntfile.js');
+  this.template('_package.json', 'package.json');
+  this.template('_bower.json', 'bower.json');
 };
 
 YoreactGenerator.prototype.projectfiles = function projectfiles() {
