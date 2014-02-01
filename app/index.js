@@ -24,13 +24,19 @@ YoreactGenerator.prototype.askFor = function askFor() {
 
   var prompts = [{
     type: 'confirm',
-    name: 'someOption',
-    message: 'Would you like to enable this option?',
+    name: 'projName',
+    message: 'What do you want to call your project?',
     default: true
-  }];
+  },
+  {
+	name: 'authorName',
+	message: 'What is your name?'
+  }
+  ];
 
   this.prompt(prompts, function (props) {
-    this.someOption = props.someOption;
+	this.projName = props.projName;
+	this.authorName = props.authorName; 
 
     cb();
   }.bind(this));
